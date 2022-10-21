@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>Product.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #629755; font-style: italic;}
+.s3 { color: #629755; font-weight: bold; font-style: italic;}
+.s4 { color: #808080;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Product.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">java.util.*</span><span class="s0">;</span>
+
+<span class="s2">/**</span>
+ <span class="s2">* Title:        HACS</span>
+ <span class="s2">* Description:  CSE870 Homework 3:  Implementing Design Patterns</span>
+ <span class="s2">* Copyright:    Copyright (c) 2002</span>
+ <span class="s2">* Company:      Department of Computer Science and Engineering, Michigan State University</span>
+ <span class="s2">* </span><span class="s3">@author </span><span class="s2">Ji Zhang, Wei Zhu</span>
+ <span class="s2">* </span><span class="s3">@version </span><span class="s2">1.0</span>
+ <span class="s2">* </span><span class="s3">@author </span><span class="s2">mjfindler</span>
+ <span class="s2">* </span><span class="s3">@version </span><span class="s2">2.0</span>
+ <span class="s2">* </span><span class="s3">@author </span><span class="s2">amudhan</span>
+ <span class="s2">* </span><span class="s3">@version </span><span class="s2">3.0</span>
+ <span class="s2">*/</span>
+
+<span class="s0">public class </span><span class="s1">Product {</span>
+  <span class="s0">private </span><span class="s1">String ProductName</span><span class="s0">;</span>
+  <span class="s1">ArrayList&lt;Trading&gt; tradingList= </span><span class="s0">new </span><span class="s1">ArrayList&lt;&gt;()</span><span class="s0">;</span>
+
+
+  <span class="s0">public </span><span class="s1">Product(String strProduct) {</span>
+    <span class="s0">this</span><span class="s1">.ProductName = strProduct</span><span class="s0">;</span>
+
+   <span class="s4">//0 HighLeve presentation    1  Produce Experiment</span>
+    <span class="s4">// this.TraList = NULL;</span>
+  <span class="s1">}</span>
+  
+  <span class="s0">void </span><span class="s1">AddTrading(Trading newTra)</span>
+  <span class="s1">{</span>
+    <span class="s1">tradingList.add(newTra)</span><span class="s0">;</span>
+  <span class="s1">}</span>
+  
+  <span class="s0">public </span><span class="s1">String toString()</span>
+  <span class="s1">{</span>
+    <span class="s0">return </span><span class="s1">ProductName</span><span class="s0">;</span>
+  <span class="s1">}</span>
+  
+  <span class="s0">void </span><span class="s1">accept(NodeVisitor visitor)</span>
+  <span class="s1">{</span>
+    <span class="s1">visitor.visitProduct(</span><span class="s0">this</span><span class="s1">)</span><span class="s0">;</span>
+  <span class="s1">}</span>
+
+<span class="s1">}</span></pre>
+</body>
+</html>
