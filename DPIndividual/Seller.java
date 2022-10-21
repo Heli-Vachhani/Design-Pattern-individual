@@ -11,7 +11,7 @@ public class Seller extends Person {
 			theProductMenu = new MeatProductMenu();
 		} else/// 1: Produce
 		{
-			theProductMenu = new MeatProductMenu();
+			theProductMenu = new ProduceProductMenu();
 		}
 	}
 

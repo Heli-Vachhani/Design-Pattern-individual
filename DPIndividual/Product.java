@@ -9,12 +9,12 @@ public class Product {
   ArrayList<Trading> tradingList= new ArrayList<>();
 
   protected int tradCount;
-  protected int productCategory;
+  protected String productCategory;
 
   protected String productName;
 
 
-  public Product(String strProduct, int theCategory) {
+  public Product(String strProduct, String theCategory) {
     this.ProductName = strProduct;
     this.productCategory = theCategory;
     this.tradCount = 0;
@@ -42,17 +42,18 @@ public class Product {
   }
 
 
-  public ArrayList<Trading> getTradingList() {
+  public ArrayList<Trading> getTradingList() { return tradingList; }
 
-    return tradingList;
+  public void setTradingList(ArrayList<Trading> tradingList) { this.tradingList = tradingList; }
+
+//  public void addTrading(Trading newTra) { getTradingList().add(newTra); }
+
+  public String getProductCategory() {
+    return productCategory;
   }
 
-  public void setTradingList(ArrayList<Trading> tradingList) {
-    this.tradingList = tradingList;
-  }
-
-  public void addTrading(Trading newTra) {
-    getTradingList().add(newTra);
+  public void setProductCategory(String productCategory) {
+    this.productCategory = productCategory;
   }
 
   public String getProductName() {

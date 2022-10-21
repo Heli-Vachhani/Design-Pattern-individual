@@ -39,12 +39,12 @@ public class BuyerTradingMenu extends TradingMenu {
 		jLabel3.setBounds(new Rectangle(21, 81, 92, 18));
 		lDueDate.setText("jLabel4");
 		lDueDate.setBounds(new Rectangle(254, 82, 294, 18));
-		jLabel5.setText("Offering");
-		jLabel5.setBounds(new Rectangle(24, 128, 93, 18));
+		jLabel5.setText("Offering suggested by Buyer");
+		jLabel5.setBounds(new Rectangle(24, 128, 200, 18));
 		tbOffering.setText("jTextField1");
 		tbOffering.setBounds(new Rectangle(251, 127, 211, 22));
-		jLabel6.setText("Suggested Offering");
-		jLabel6.setBounds(new Rectangle(24, 174, 117, 18));
+		jLabel6.setText("Offering from Seller");
+		jLabel6.setBounds(new Rectangle(24, 174, 150, 18));
 		jLabel7.setText("View");
 		jLabel7.setBounds(new Rectangle(23, 224, 41, 18));
 		lSuggestedOffering.setText("jLabel8");

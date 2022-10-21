@@ -20,8 +20,8 @@ class OfferingViewingDlg extends JDialog {
 	}
 
 	private void jbInit() {
-		jLabel1.setText("Offering File Name");
-		jLabel1.setBounds(new Rectangle(23, 30, 121, 18));
+		jLabel1.setText("Latest Offering from Buyer");
+		jLabel1.setBounds(new Rectangle(23, 30, 150, 18));
 		this.getContentPane().setLayout(null);
 		tfGrad.setBounds(new Rectangle(25, 66, 100, 22));
 		buttonOK.setText("OK");
