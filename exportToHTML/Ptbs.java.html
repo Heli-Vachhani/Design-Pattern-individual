@@ -1,0 +1,65 @@
+<html>
+<head>
+<title>Ptbs.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #629755; font-style: italic;}
+.s1 { color: #629755; font-weight: bold; font-style: italic;}
+.s2 { color: #a9b7c6;}
+.s3 { color: #cc7832;}
+.s4 { color: #808080;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Ptbs.java</font>
+</center></td></tr></table>
+<pre><span class="s0">/**</span>
+ <span class="s0">* Title: HACS Description: Copyright: Copyright (c) 2002 Company: msu</span>
+ <span class="s0">* </span>
+ <span class="s0">* </span><span class="s1">@author </span><span class="s0">Zhang ji Zhu Wei</span>
+ <span class="s0">* </span><span class="s1">@version </span><span class="s0">1.0</span>
+ <span class="s0">* </span><span class="s1">@author </span><span class="s0">mjfindler</span>
+ <span class="s0">* </span><span class="s1">@version </span><span class="s0">2.0</span>
+ <span class="s0">* </span>
+ <span class="s0">* Update to Java 8</span>
+ <span class="s0">*/</span>
+
+<span class="s3">public class </span><span class="s2">Ptbs {</span>
+
+	<span class="s3">static </span><span class="s2">Facade theFacade = </span><span class="s3">new </span><span class="s2">Facade()</span><span class="s3">;</span>
+
+	<span class="s3">public </span><span class="s2">Ptbs() {</span>
+	<span class="s2">}</span>
+
+	<span class="s3">public static void </span><span class="s2">main(String[] args) {</span>
+<span class="s4">//      String strUsername;</span>
+<span class="s4">//      String strUserType = null;</span>
+		<span class="s2">UserInfoItem userinfoitem = </span><span class="s3">new </span><span class="s2">UserInfoItem()</span><span class="s3">;</span>
+		<span class="s2">theFacade.CreateProductList()</span><span class="s3">;</span>
+		<span class="s3">while </span><span class="s2">(</span><span class="s3">true</span><span class="s2">) {</span>
+			<span class="s3">boolean </span><span class="s2">bExit</span><span class="s3">;</span>
+			<span class="s2">bExit = Facade.Login(userinfoitem)</span><span class="s3">;</span>
+			<span class="s3">if </span><span class="s2">(bExit)</span>
+				<span class="s3">break;</span>
+			<span class="s4">// userinfoitem.strUserName = &quot;Inst1&quot;;</span>
+			<span class="s4">// userinfoitem.UserType = 1;</span>
+			<span class="s2">theFacade.CreateUser(userinfoitem)</span><span class="s3">;</span>
+			<span class="s2">theFacade.AttachProductToUser()</span><span class="s3">;</span>
+			<span class="s3">if </span><span class="s2">(userinfoitem.UserType == UserInfoItem.USER_TYPE.Buyer) </span><span class="s4">// if is a buyer remind him of the due date</span>
+				<span class="s2">theFacade.Remind()</span><span class="s3">;</span>
+			<span class="s3">boolean </span><span class="s2">bLogout = </span><span class="s3">false;</span>
+			<span class="s3">while </span><span class="s2">(!bLogout) {</span>
+				<span class="s2">bLogout = theFacade.SelectProduct()</span><span class="s3">;</span>
+				<span class="s3">if </span><span class="s2">(bLogout)</span>
+					<span class="s3">break;</span>
+				<span class="s2">bLogout = theFacade.ProductOperation()</span><span class="s3">;</span>
+			<span class="s2">}</span>
+		<span class="s2">}</span>
+<span class="s4">//    System.out.println(userinfoitem.strUserName +userinfoitem.UserType );</span>
+	<span class="s2">}</span>
+<span class="s2">}</span></pre>
+</body>
+</html>
