@@ -39,7 +39,7 @@ public class OfferingIterator implements Iterator
     //    throw new java.lang.UnsupportedOperationException("Method next() not yet implemented.");
   }
 
-  /// get the next Offering that fits the Username;
+  // get the next Offering that fits the Username;
   Object next(String UserName)
   {
     Offering theOffering;

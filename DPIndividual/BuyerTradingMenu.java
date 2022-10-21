@@ -4,7 +4,6 @@ import java.util.Date;
 
 public class BuyerTradingMenu extends TradingMenu {
 
-////  class TradingMenu
 	private boolean boolSubmit = false;
 
     private JLabel lTradingName = new JLabel();
@@ -72,8 +71,8 @@ public class BuyerTradingMenu extends TradingMenu {
 	}
 
 	/*
-	 * check if the buyer has already had a offering or not. if not , create a new
-	 * offering for the buyer. after showing the offering attatch the soluiton;
+	 * Check if the buyer already had a offering or not.
+	 * If not, create a new offering for the buyer.
 	 */
 	public void ShowMenu(Trading trading, Person thePerson) {
         OfferingIterator theIter = trading.GetOfferingIterator();

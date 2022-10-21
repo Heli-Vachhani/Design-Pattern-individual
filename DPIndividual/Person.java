@@ -38,9 +38,9 @@ abstract public class Person {
 
 	// show the trading list
 	public boolean ShowMenu() {
-		// create a iterator for the trading list
+		// Create a iterator for the trading list
 //    Iterator theIter=new ListIterator(CurrentProduct.TraList );
-//		Iterator theIter = CurrentProduct.tradingList.iterator();
+//    Iterator theIter = CurrentProduct.tradingList.iterator();
 
 		Iterator theIter = CurrentProduct.getTradingList().iterator();
 		theProductMenu.theProduct = CurrentProduct;

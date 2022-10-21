@@ -7,7 +7,7 @@ class ClassProductList extends ArrayList<Product> {
 	ClassProductList() {
 	}
 
-	//// initialize the list by reading from the file.
+	// Create Product-list by reading from the file.
 	void InitializeFromFile() {
 		try {
 			BufferedReader file;

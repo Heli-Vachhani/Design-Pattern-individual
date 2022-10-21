@@ -93,28 +93,25 @@ class Login extends JDialog {
 
 	}
 
-	/*
-	 * get the user name from aline UserName:Password
-	 */
+	// Get the user name from aline UserName:Password
 	private String GetUserName(String aline) {
 		int Sep = aline.lastIndexOf(':');
 		return aline.substring(0, Sep);
 	}
 
-	/*
-	 * get the password from aline UserName:Password
-	 */
+
+	 // Get the password from aline UserName:Password
 	private String GetPassword(String aline) {
 		int Sep = aline.lastIndexOf(':');
 		return aline.substring(Sep + 1);
 	}
 
-	/* after login get the UserName of the login interface */
+	// After login get the UserName of the login interface
 	String GetUserName() {
 		return UserBox;
 	}
 
-	/* after login get the userType of the login interface */
+	// After login get the userType of the login interface
 	UserInfoItem.USER_TYPE GetUserType() {
 		return UserType;
 	}

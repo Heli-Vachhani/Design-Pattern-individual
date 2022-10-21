@@ -6,7 +6,7 @@ public class Seller extends Person {
 	}
 
 	public void CreateProductMenu(Product theProduct, int theCategory) {
-		if (theCategory == 0)/// 0: Meat defined in ProductSeletDlg.
+		if (theCategory == 0)/// 0: Meat (defined in ProductSeletDlg)
 		{
 			theProductMenu = new MeatProductMenu();
 		} else/// 1: Produce

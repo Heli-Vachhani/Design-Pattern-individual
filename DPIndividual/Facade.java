@@ -18,14 +18,12 @@ class Facade {
 		return login.isExit();
 	}
 
-/////////////////////////
 //functions for ProductMenu
 	/*
-	 * When click the add button of the ProductMenu , call this function this
-	 * function will new an trading fill the required infomation this function
-	 * will call SellerTradingMenu or BuyerTradingMenu according to the
-	 * type of the user it will not update the product menu. the productmenu need to
-	 * refreshed outside the function
+	 * > When add button of the ProductMenu is clicked, call this function
+	 * > Then fill the required information
+	 * > This function will then call SellerTradingMenu or BuyerTradingMenu according to the type of the user it will not update the product menu.
+	 * > The productmenu need to be refreshed outside the function
 	 */
 
 	void AddTrading(Product theProduct) {
@@ -42,11 +40,10 @@ class Facade {
 	}
 
 	/*
-	 * When click the view button of the ProductMenu , call this function and pass
-	 * the pointer of the Trading and the person pointer to this function this
-	 * function will new an trading fill the required infomation this function
-	 * will call SellerTradingMenu or BuyerTradingMenu according to the
-	 * type of the user
+	 * When click the view button of the ProductMenu ,
+	 * Call this function and pass the pointer of the Trading and the person pointer to this function
+	 * Fill the required infomation this function
+	 * Call SellerTradingMenu or BuyerTradingMenu according to the type of the user
 	 */
 	void ViewTrading(Trading theTrading) {
 		TradingMenu theTradingMenu;
@@ -62,12 +59,9 @@ class Facade {
 
 //functions for SellerTradingMenu
 	/*
-	 * this function will view the give Offering: theOffering this function calls
+	 * this function will view the give Offering
 	 */
 
-	////////////////////
-
-	//////////
 	void Remind() {
 		Reminder theReminder = new Reminder();
 		theReminder.showReminder(thePerson.GetProductList());
@@ -93,9 +87,9 @@ class Facade {
 	}
 
 	/*
-	 * call this function after create user, create productlist read the
-	 * UserProduct.txt file match the productname with theProductList attach the
-	 * Matched product object to the new create user Facade.thePerson.ProductList
+	 * Call this function after user is created,
+	 * Create productlist, read the UserProduct.txt file, match the productname with theProductList,
+	 * Attach the Matched product object to the newly created user Facade.thePerson.ProductList
 	 */
 	void AttachProductToUser() {
 		BufferedReader file;
@@ -119,27 +113,23 @@ class Facade {
         }
 	}
 
-	/*
-	 * get the user name from aline UserName:ProductName
-	 */
+
+	//Get the user name from aline UserName:ProductName
 	private String GetUserName(String aline) {
 		int Sep = aline.lastIndexOf(':');
 		return aline.substring(0, Sep);
 	}
 
-	/*
-	 * get the ProductName from aline UserName:ProductName
-	 */
+	//Get the ProductName from aline UserName:ProductName
 	private String GetProductName(String aline) {
 		int Sep = aline.lastIndexOf(':');
 		return aline.substring(Sep + 1);
 	}
 
 	/*
-	 * show the product selection dlg, show the product attatched to theperson and
+	 * Show the product selection dlg, show the product is attatched to theperson and
 	 * return the selected product and assign the product to the class member
-	 * theSelecteProduct, the Product Level to ProductLevel ProductLeve=0 High,
-	 * ProductLeve=1 Low
+	 * theSelecteProduct, the Product Level to ProductCategory
 	 */
 	boolean SelectProduct() {
 		ProductSelectDlg theDlg = new ProductSelectDlg();
@@ -150,9 +140,8 @@ class Facade {
 	}
 
 	/*
-	 * call the thePerson.CreateProductMenu according to the really object(buyer or
-	 * seller) and the nProductCategory it will call different menu creater and show
-	 * the menu;
+	 * Call the thePerson.CreateProductMenu according to the really object(buyer or seller)
+	 * and the nProductCategory it will call different menu creater and show the menu;
 	 */
 
 	boolean ProductOperation() {
@@ -161,9 +150,10 @@ class Facade {
 	}
 
 	/*
-	 * find the product in theProductList that matches strProductName 1 create a
-	 * ProductIterator for the List 2 Find the Product with the Iterator return the
-	 * pointer of the Product if not fine, return null;
+	 * Find the product in theProductList that matches strProductName 1
+	 * Create a ProductIterator for the List 2
+	 * Find the Product with the Iterator return the pointer of the Product if not fine,
+	 * return null;
 	 */
 	private Product FindProductByProductName(String strProductName) {
 		ProductIterator Iterator = new ProductIterator(theProductList);

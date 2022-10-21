@@ -2,11 +2,6 @@ import java.awt.*;
 
 class MeatProductMenu extends ProductMenu {
 
-	/*
-	 * JButton TradingAddButton = new JButton(); JRadioButton OptionRadio = new
-	 * JRadioButton(); JComboBox OpSho6wtionCombo = new JComboBox(); JButton
-	 * OptionViewButton = new JButton(); JButton OptionAddButton = new JButton();
-	 */
 
 	MeatProductMenu() {
 	}

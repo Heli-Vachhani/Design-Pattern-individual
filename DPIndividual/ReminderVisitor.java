@@ -1,10 +1,11 @@
 import java.util.*;
 
 /*
- * this class will iterate the product list attatched to on buyer and in turn
- * iterate the tradings of a product. after Function Visit(ProductList) it will
- * point to the location before the fist class, hasNext will retrun weather
- * there is next item. the next() will return the next Item Trading;
+ * this class will iterate the product list attatched to on buyer
+ * and in turn iterate the tradings of a product.
+ * After Function Visit(ProductList) it will point to the location before the fist class,
+ * hasNext will retrun weather there is next item.
+ * the next() will return the next Item Trading;
  */
 
 public class ReminderVisitor extends NodeVisitor {
@@ -42,7 +43,6 @@ public class ReminderVisitor extends NodeVisitor {
 					+ trading.getDueDateString());
 		}
 		if (nDueDate < ntoday) {
-			// put to the
 			m_Reminder.listOverdue.add(trading.TraName + " Due Date is " + trading.getDueDateString());
 		}
 

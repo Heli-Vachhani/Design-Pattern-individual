@@ -19,7 +19,7 @@ public class Product {
     this.productCategory = theCategory;
     this.tradCount = 0;
 
-   //0 Meat    1  Produce
+    //0: Meat    1:  Produce
     // this.TraList = NULL;
   }
   
